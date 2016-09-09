@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/audioControllerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/controllerBackgroundPrimary"
+    android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:id="@+id/controllerTrackTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:textColor="@color/textPrimary"
+                android:marqueeRepeatLimit="marquee_forever"/>
+
+            <TextView
+                android:id="@+id/controllerTrackArtist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/controllerTrackTitle"
+                android:textSize="14sp"
+                android:textColor="@color/textSecondary"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"/>
+
+            <TextView
+                android:id="@+id/controllerTrackAlbum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/controllerTrackArtist"
+                android:textSize="14sp"
+                android:textColor="@color/textSecondary"
+                android:textStyle="italic"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:layout_marginBottom="4dp">
+
+            <TextView android:id="@+id/controllerPlayedTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="12sp"
+                android:textColor="@color/textPrimary"/>
+
+            <com.github.ematiyuk.audioplayermd.CustomSeekBar
+                android:id="@+id/controllerProgress"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_weight="1"/>
+
+            <TextView android:id="@+id/controllerTotalTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="12sp"
+                android:textColor="@color/textPrimary"/>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="@color/controllerBottomBackground">
+
+        <ImageButton android:id="@+id/prevButton"
+            style="@android:style/MediaButton.Previous"
+            android:src="@drawable/ic_control_prev"
+            android:background="@drawable/control_button_background"
+            android:contentDescription="@string/description" />
+
+        <ImageButton android:id="@+id/playPauseButton"
+            style="@android:style/MediaButton.Play"
+            android:src="@drawable/ic_control_play"
+            android:background="@drawable/control_button_background"
+            android:contentDescription="@string/description" />
+
+        <ImageButton android:id="@+id/stopButton"
+            android:layout_width="71dip"
+            android:layout_height="52dip"
+            android:background="@drawable/control_button_background"
+            android:src="@drawable/ic_control_stop"
+            android:contentDescription="@string/description" />
+
+        <ImageButton android:id="@+id/nextButton"
+            style="@android:style/MediaButton.Next"
+            android:src="@drawable/ic_control_next"
+            android:background="@drawable/control_button_background"
+            android:contentDescription="@string/description" />
+
+    </LinearLayout>
+
+</LinearLayout>

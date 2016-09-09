@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".TrackActivity" >
+
+    <item
+        android:id="@+id/actionSearch"
+        android:icon="@drawable/ic_action_search"
+        android:title="@string/search_string"
+        app:showAsAction="collapseActionView|ifRoom"
+        app:actionViewClass="android.support.v7.widget.SearchView" />
+
+    <item
+        android:id="@+id/actionSelectDirectory"
+        android:icon="@drawable/ic_action_select_dir"
+        app:showAsAction="ifRoom"
+        android:title="@string/select_mode_menu_item"/>
+
+    <item
+        android:id="@+id/actionSort"
+        android:icon="@drawable/ic_action_sort"
+        app:showAsAction="ifRoom"
+        android:title="@string/sort_string"/>
+
+</menu>

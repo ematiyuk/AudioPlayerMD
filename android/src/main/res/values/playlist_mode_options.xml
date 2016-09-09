@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="songs_display_mode_options">
+        <item>@string/display_all_songs_string</item>
+        <item>@string/select_dir_string</item>
+    </string-array>
+</resources>

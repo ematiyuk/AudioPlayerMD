@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/trackItemLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/list_item_background"
+    android:padding="5dp" >
+
+    <ImageView
+        android:id="@+id/audioTrackIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="4dp"
+        android:layout_marginEnd="4dp"
+        android:src="@drawable/ic_audio_track_orange"
+        android:contentDescription="AudioTrackIcon"/>
+
+    <TextView
+        android:id="@+id/trackDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="12sp"
+        android:paddingRight="5dp"
+        android:paddingEnd="5dp"
+        android:paddingStart="2dp"
+        android:paddingLeft="2dp"
+        android:paddingTop="2dp"
+        android:textColor="@color/textSecondary"/>
+
+    <TextView
+        android:id="@+id/trackTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/audioTrackIcon"
+        android:layout_toEndOf="@id/audioTrackIcon"
+        android:layout_toLeftOf="@id/trackDuration"
+        android:layout_toStartOf="@id/trackDuration"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/textSecondary"/>
+
+    <TextView
+        android:id="@+id/trackArtist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/audioTrackIcon"
+        android:layout_toEndOf="@id/audioTrackIcon"
+        android:layout_below="@id/trackTitle"
+        android:layout_toLeftOf="@id/trackDuration"
+        android:layout_toStartOf="@id/trackDuration"
+        android:textSize="12sp"
+        android:textColor="@color/textSecondary"/>
+
+    <TextView
+        android:id="@+id/trackAlbum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/audioTrackIcon"
+        android:layout_toEndOf="@id/audioTrackIcon"
+        android:layout_below="@id/trackArtist"
+        android:layout_toLeftOf="@id/trackDuration"
+        android:layout_toStartOf="@id/trackDuration"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        android:textColor="@color/textSecondary"/>
+
+</RelativeLayout>

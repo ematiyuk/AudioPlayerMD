@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">AudioPlayerMD</string>
+    <string name="playing_string">Now playing</string>
+    <string name="description">Media Controls</string>
+    <string name="stop_description">Stop</string>
+
+    <string name="sort_string">Sort</string>
+    <string name="search_string">Search</string>
+    <string name="sort_dialog_title">Sort by&#8230;</string>
+    <string name="search_filter_dialog_title">Filter by&#8230;</string>
+    <string name="playlist_mode_dialog_title">Playlist mode</string>
+
+    <string name="track_title">Title</string>
+    <string name="track_artist">Artist</string>
+    <string name="track_album">Album</string>
+    <string name="track_running_time">Running time</string>
+
+    <string name="search_hint">Search tracks&#8230;</string>
+    <string name="search_by_title_hint">Search by title&#8230;</string>
+    <string name="search_by_artist_hint">Search by artist&#8230;</string>
+    <string name="search_by_album_hint">Search by album&#8230;</string>
+
+    <string name="on_search_clicked_toast_msg">Long click on search icon will show filter options</string>
+
+    <string name="error_playing_track_toast_msg">Unable to play the track</string>
+    <string name="error_gain_focus_msg">Unable to gain audio focus</string>
+    <string name="error_common_playback_error">Playback error</string>
+
+    <string name="error_scanning_tracks">Error occurred while scanning tracks</string>
+    <string name="scanning_completed">Scanning completed</string>
+    <string name="scanning_progress_msg">Scanning tracks&#8230;</string>
+
+    <string name="display_all_songs_string">Display all songs</string>
+    <string name="all_songs_string">All songs</string>
+    <string name="select_dir_string">Select a directory&#8230;</string>
+    <string name="select_mode_menu_item">Select mode</string>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sort_by_options">
+        <item>@string/track_title</item>
+        <item>@string/track_artist</item>
+        <item>@string/track_album</item>
+        <item>@string/track_running_time</item>
+    </string-array>
+</resources>

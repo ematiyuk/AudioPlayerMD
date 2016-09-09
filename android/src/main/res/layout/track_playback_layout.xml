@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/audioControllerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/controllerBackgroundPrimary"
+    android:orientation="vertical" >
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/controls_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary">
+
+            <TextView
+                android:id="@+id/appNameHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/text"
+                android:paddingLeft="12dp"
+                android:layout_centerInParent="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:text="@string/app_name"/>
+
+            <ProgressBar
+                android:id="@+id/loadingProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.ProgressBar"
+                android:maxHeight="24dip"
+                android:minHeight="24dip"
+                android:minWidth="24dip"
+                android:maxWidth="24dip"
+                android:layout_toRightOf="@id/appNameHeader"
+                android:layout_toLeftOf="@id/playPauseButton"
+                android:layout_centerInParent="true"/>
+
+            <ImageButton android:id="@+id/playPauseButton"
+                style="@android:style/MediaButton.Play"
+                android:src="@drawable/ic_control_play"
+                android:contentDescription="@string/description"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/control_button_background"
+                android:layout_alignParentEnd="true"/>
+
+            </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:paddingTop="12dp">
+
+            <TextView android:id="@+id/controllerPlayedTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/textPrimary"
+                android:textSize="12sp"/>
+
+            <com.github.ematiyuk.audioplayermd.CustomSeekBar
+                android:id="@+id/controllerProgress"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:progressDrawable="@drawable/scrubber_progress_horizontal"
+                android:indeterminateDrawable="@drawable/scrubber_progress_horizontal"
+                android:thumb="@drawable/scrubber_control_selector"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_weight="1"/>
+
+            <TextView android:id="@+id/controllerTotalTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="12sp"
+                android:textColor="@color/textPrimary"/>
+
+        </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="12dp">
+
+        <TextView
+            android:id="@+id/controllerTrackTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/textPrimary"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"/>
+
+        <TextView
+            android:id="@+id/controllerTrackArtist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/controllerTrackTitle"
+            android:textSize="14sp"
+            android:textColor="@color/textPrimary"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

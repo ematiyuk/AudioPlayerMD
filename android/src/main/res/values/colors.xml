@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary">#ff6410</color>
-    <color name="primary_dark">#E64A19</color>
+    <color name="primary">#ef5c00</color>
+    <color name="primary_dark">#e64100</color>
     <color name="accent">#ffd269</color>
     <color name="textPrimary">#212121</color>
     <color name="text">#FFFFFF</color>
@@ -12,7 +12,7 @@
     <color name="listItemPressedBackground">#fffae0</color>
 
     <color name="controlButtonBackground">@color/primary</color>
-    <color name="controlButtonPressedBackground">#ff813d</color>
+    <color name="controlButtonPressedBackground">#ef7f39</color>
 
     <color name="controllerBackgroundPrimary">#FFFFFF</color>
     <color name="controllerBottomBackground">@color/primary</color>

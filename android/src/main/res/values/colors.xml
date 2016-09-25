@@ -17,5 +17,5 @@
     <color name="controllerBackgroundPrimary">#FFFFFF</color>
     <color name="controllerBottomBackground">@color/primary</color>
 
-    <color name="dialogBackground">@color/listItemDefaultBackground</color>
+    <color name="dialogBackground">#fffadd</color>
 </resources>

@@ -8,7 +8,7 @@
     <string name="search_string">Search</string>
     <string name="sort_dialog_title">Sort by&#8230;</string>
     <string name="search_filter_dialog_title">Filter by&#8230;</string>
-    <string name="playlist_mode_dialog_title">Playlist mode</string>
+    <string name="playlist_mode_dialog_title">Select songs</string>
 
     <string name="track_title">Title</string>
     <string name="track_artist">Artist</string>
@@ -33,5 +33,5 @@
     <string name="display_all_songs_string">Display all songs</string>
     <string name="all_songs_string">All songs</string>
     <string name="select_dir_string">Select a directory&#8230;</string>
-    <string name="select_mode_menu_item">Select mode</string>
+    <string name="select_mode_menu_item">@string/playlist_mode_dialog_title</string>
 </resources>

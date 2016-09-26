@@ -583,10 +583,10 @@ public class PlaylistFragment extends Fragment
 
     private void scanTracks(Uri folderUri) {
         Settings.get(getActivity()).saveCurrentFolderUri(folderUri);
-        new TrackScanner().execute(folderUri);
+        new AsyncTrackScanner().execute(folderUri);
     }
 
-    private class TrackScanner extends AsyncTask<Uri, Integer, String> {
+    private class AsyncTrackScanner extends AsyncTask<Uri, Integer, String> {
 
         @Override
         protected void onPreExecute() {

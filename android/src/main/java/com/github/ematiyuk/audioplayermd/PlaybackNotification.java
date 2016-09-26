@@ -32,7 +32,7 @@ public class PlaybackNotification {
         Notification.Builder builder = new Notification.Builder(mContext);
 
         builder.setContentIntent(pendingIntent)
-                .setSmallIcon(R.mipmap.ic_launcher)
+                .setSmallIcon(R.drawable.ic_notification_top_bar)
                 .setTicker(mContext.getString(R.string.playing_string) + ": "
                         + track.getTitle() + " - " + track.getArtist())
                 .setOngoing(true)

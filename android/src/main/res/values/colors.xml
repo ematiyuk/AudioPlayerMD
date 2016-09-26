@@ -8,8 +8,8 @@
     <color name="textSecondary">#757575</color>
 
     <color name="listItemDefaultBackground">#ffffff</color>
-    <color name="listItemActivatedBackground">#fff0a2</color>
-    <color name="listItemPressedBackground">#fffae0</color>
+    <color name="listItemActivatedBackground">#ffee97</color>
+    <color name="listItemPressedBackground">#fff7d0</color>
 
     <color name="controlButtonBackground">@color/primary</color>
     <color name="controlButtonPressedBackground">#ef7f39</color>

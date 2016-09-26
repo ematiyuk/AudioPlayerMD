@@ -5,6 +5,7 @@
     <string name="stop_description">Stop</string>
 
     <string name="sort_string">Sort</string>
+    <string name="filter_string">Filter</string>
     <string name="search_string">Search</string>
     <string name="sort_dialog_title">Sort by&#8230;</string>
     <string name="search_filter_dialog_title">Filter by&#8230;</string>
@@ -19,8 +20,6 @@
     <string name="search_by_title_hint">Search by title&#8230;</string>
     <string name="search_by_artist_hint">Search by artist&#8230;</string>
     <string name="search_by_album_hint">Search by album&#8230;</string>
-
-    <string name="on_search_clicked_toast_msg">Long click on search icon will show filter options</string>
 
     <string name="error_playing_track_toast_msg">Unable to play the track</string>
     <string name="error_gain_focus_msg">Unable to gain audio focus</string>

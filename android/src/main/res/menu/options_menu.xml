@@ -23,4 +23,10 @@
         app:showAsAction="ifRoom"
         android:title="@string/sort_string"/>
 
+    <item
+        android:id="@+id/actionFilter"
+        android:icon="@drawable/ic_action_filter"
+        app:showAsAction="ifRoom"
+        android:title="@string/filter_string"/>
+
 </menu>

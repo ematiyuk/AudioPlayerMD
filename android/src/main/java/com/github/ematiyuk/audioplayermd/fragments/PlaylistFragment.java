@@ -67,6 +67,7 @@ public class PlaylistFragment extends Fragment
 
     private SearchView mSearchView;
     private MenuItem mSortMenuItem;
+    private MenuItem mFilterMenuItem;
     private int mSearchFilterIndex;
     private Intent mAudioServiceIntent;
     private long mLastTrackId;
@@ -224,14 +225,17 @@ public class PlaylistFragment extends Fragment
 
         MenuItem searchMenuItem = menu.findItem(R.id.actionSearch);
         mSortMenuItem = menu.findItem(R.id.actionSort);
+        mFilterMenuItem = menu.findItem(R.id.actionFilter);
         mSelectDirMenuItem = menu.findItem(R.id.actionSelectDirectory);
         mSortMenuItem.setVisible(true);
+        mFilterMenuItem.setVisible(false);
         mSelectDirMenuItem.setVisible(true);
 
         MenuItemCompat.setOnActionExpandListener(searchMenuItem, new MenuItemCompat.OnActionExpandListener() {
             @Override
             public boolean onMenuItemActionExpand(MenuItem item) {
                 mSearchActivated = true;
+                mFilterMenuItem.setVisible(true);
                 return true;
             }
 
@@ -246,6 +250,7 @@ public class PlaylistFragment extends Fragment
                 }
 
                 mSortMenuItem.setVisible(true);
+                mFilterMenuItem.setVisible(false);
                 mSelectDirMenuItem.setVisible(true);
 
                 return true;
@@ -263,15 +268,6 @@ public class PlaylistFragment extends Fragment
         // show "search" icon on the left of the search field
         mSearchView.setIconifiedByDefault(false);
 
-        // show search filter dialog on long click on "search" icon
-        mSearchView.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View view) {
-                showSearchFilterDialog();
-                return true;
-            }
-        });
-
         mSearchView.setQueryHint(getQueryHintByPosition(Settings.get(getActivity())
                 .retrieveSearchFilterPosition()));
     }
@@ -280,8 +276,6 @@ public class PlaylistFragment extends Fragment
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.actionSearch:
-                mSearchFilterIndex = Settings.get(getActivity()).retrieveSearchFilterPosition();
-                Toast.makeText(getActivity(), R.string.on_search_clicked_toast_msg, Toast.LENGTH_LONG).show();
                 mSortMenuItem.setVisible(false);
                 mSelectDirMenuItem.setVisible(false);
                 return true;
@@ -290,6 +284,10 @@ public class PlaylistFragment extends Fragment
                 return true;
             case R.id.actionSelectDirectory:
                 showPlaylistModeDialog();
+                return true;
+            case R.id.actionFilter:
+                mSearchFilterIndex = Settings.get(getActivity()).retrieveSearchFilterPosition();
+                showSearchFilterDialog();
                 return true;
             default:
                 return false;

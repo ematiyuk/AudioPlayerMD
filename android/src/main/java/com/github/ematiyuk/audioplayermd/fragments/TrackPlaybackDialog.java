@@ -149,7 +149,7 @@ public class TrackPlaybackDialog extends DialogFragment
                     dismiss(); // close the dialog
                 }
             }
-        }, 1000L);
+        }, 1500L);
     }
 
     @Override
